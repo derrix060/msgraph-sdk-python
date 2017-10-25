@@ -33,7 +33,7 @@ class TestCollections(unittest.TestCase):
         client = msgraph.GraphClient("graphurl/", http_provider, auth_provider)
 
         items = client.drives["me"].items["root"].children.request().get()
-        
+
         assert len(items) == 2
         assert type(items) is ChildrenCollectionPage
         assert items[0].name == "test1"
@@ -60,7 +60,7 @@ class TestCollections(unittest.TestCase):
         client = msgraph.GraphClient("graphurl/", http_provider, auth_provider)
 
         items = client.drives["me"].items["root"].children.request().get()
-        
+
         assert type(items.next_page_request) is ChildrenCollectionRequest
         assert type(items.next_page_request.get()) is ChildrenCollectionPage
 

@@ -115,10 +115,10 @@ class TestRequests(unittest.TestCase):
         mock = Mock()
 
         copy_operation = client.drives["me"].items["testitem!id"].copy(parent_reference=ref, name="newName").request().post()
-        
+
         response = HttpResponse(200, None, json.dumps({"operation":"copy", "percentageComplete":0, "status": "In progress"}))
         instance_http.send.return_value = response
-        
+
         time.sleep(0.2)
 
         assert copy_operation.item is None

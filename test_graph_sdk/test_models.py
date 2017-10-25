@@ -13,12 +13,12 @@ class TestModels(unittest.TestCase):
         Test the serialization of the dict-backed models, seeing that
         the correct objects are returned when called
         """
-        ref = ItemReference();
+        ref = ItemReference()
         ref._prop_dict = {"id": "thisisa!test"}
 
         response = {"name":"test1", "folder":{}, "parentReference":ref._prop_dict, "lastModifiedDateTime": "2015-07-09T22:22:53.993000Z"}
 
-        item = Item();
+        item = Item()
         item._prop_dict = response
 
         assert type(item.folder) is Folder
