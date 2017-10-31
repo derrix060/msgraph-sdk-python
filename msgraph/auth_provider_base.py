@@ -93,7 +93,7 @@ class AuthProviderBase(object):
         pass
 
     @abc.abstractmethod
-    def authenticate(self, code, auth_server_url, redirect_uri, client_secret):
+    def authenticate(self, code, client_secret, resource):
         """Takes in a code string, gets the access token,
         and creates session property bag
 
