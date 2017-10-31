@@ -8,7 +8,7 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
-with open(path.join(here, 'src', 'msgraph', 'version.txt'), encoding='utf-8') as f:
+with open(path.join(here, 'msgraph', 'version.txt'), encoding='utf-8') as f:
     version = f.read()
 
 
@@ -58,7 +58,7 @@ def main():
 
         packages=package_list,
 
-        package_dir={'msgraph': path.join('src', 'msgraph'),
+        package_dir={'msgraph': path.join('msgraph'),
                      'msgraph.request': path.join('src', base_dir, 'request')},
 
         package_data={'msgraph': [r'version.txt']},
