@@ -18,7 +18,10 @@ def main():
                     'msgraph.model',
                     'msgraph.extensions']
 
-    required_packages = ['requests>=2.6.1']
+    required_packages = ['requests>=2.6.1',
+                         'keyring>=10.4.0',
+                         'dbus-python=1.2.4',
+                         '']
 
     if sys.version_info >= (3, 4):
         base_dir = 'python3'
